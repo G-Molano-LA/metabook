@@ -1,0 +1,82 @@
+% !TEX root = ../notes_template.tex
+\chapter{Metagenomics}\label{chp:metagenomics}
+
+\minitoc
+
+\section{Metagenomes reconstruction}
+ 
+Binning. Critical step required to establish a genome from a metagenomic assembly. This involves assignment of assembled 
+fragments to a draft genome based on detection on any scaffold of some signal(s) that occur(s) locally within a genome and 
+persists genome-wide \cite{Chen2020}. 
+
+Genome curation \cite{Hiltemann2023,microbiome-metagenomics-binning}. Filling scaffolding gaps and removal of local assembly 
+errors. Gap filling strategies: 
+\begin{itemize}
+    \item[GapFiller] Tool for filling the N's gaps at scaffold joins. Often a few iterations are needed for gap closure. Using:
+    \begin{itemize}
+        \item Unplaced pairs for reads adjacent to the gaps. When reads are mapped to genome fragments that compose a bin, a 
+        file of unplaced paired reads is generated for each fragment.
+        \begin{itemize}
+            \item If due to low coverage gap filling is not achieve, potentially use of reads from other sample in which the sample population occurs.
+            \item Deeper sequencing of the same sample.
+        \end{itemize}
+        \item Placement of full metagenomic read data set to the new version of the scaffold.
+        \item Use of misplaced reads. This can be useful in cases where the necessary reads are misplaced, either elsewhere 
+        on that scaffold or on another scaffold in the bin. Misplaced read identification:
+        \begin{itemize}
+            \item Read pileups with anomalously high frequencies of SNVs in a subset of reads.
+            \item Read pairs point outward (rather than toward each other, as expected).
+            \item Unusually long paired read distances.
+        \end{itemize}
+        \item Sometimes even with sufficient read depth, gap filling cannot be achieved due to complex repeats. 
+        Sometimes these repeat regions can be resolved careful read-by-read analysis, often requiring relocation of reads 
+        based on the placement of their pairs and sequence identity.
+    \end{itemize}
+\end{itemize}
+
+Local assembly errors (from more common to less):
+\begin{itemize}
+    \item Error I:
+    \begin{description}
+        \item[Identification] Sequence in that region lacks perfect support, by even one read.
+        \item[Solution] Consensus sequence should be replaced by Ns (gap), which can be further filled.
+        \item[Example] \url{https://genome.cshlp.org/content/suppl/2020/03/18/gr.258640.119.DC1/Supplemental_Fig_S3.pdf}.
+    \end{description}  
+    \item Error II:
+    \begin{description}
+        \item[Identification] Ns have been inserted during scaffolding despite overlap between the flanking sequences.
+        \item[Solution] Close the gap, eliminating the Ns and the duplicated sequence.
+        \item[Example] \url{https://genome.cshlp.org/content/suppl/2020/03/18/gr.258640.119.DC1/Supplemental_Fig_S4.pdf}.
+    \end{description}
+    \item Error III:
+    \begin{description}
+        \item[Identification] Incorrect number of repeats has been incorporated into the scaffold sequences. Anomalous read 
+        depth over that region.
+    \end{description}
+    \item Error IV: Chimera sequences from two different organisms.
+    \begin{description}
+        \item[Identification] These joints typically lack paired read support and/or can be identified by very different 
+        coverage values and/or phylogenetic profiles on either side of the join.
+    \end{description}
+    \item Error V: Artificial concatenation of an identical sequence.
+    \begin{description}
+        \item[Identification] Repeat finder.
+    \end{description}
+\end{itemize}
+
+\section{Pangenomes}
+[TO DO]
+Differents genes within a population. Pangenome analysis.
+
+\section{Microbila diversity}
+[TO DO]
+Beta diversity and its representation. Concept of dimensionality reduction techniques.
+
+\section{Abundance estimation}
+[TO DO]
+How to quantify composition: markers genes and what makes good a marker gene (to be single and present in the core).
+
+\section{Sequencing depth}
+[TO DO]
+Huttenhower -> For strain analysis = ideally 10X; Gene-absence: \(\backsim\)1X
+Discoveries and findings with microbelix. 

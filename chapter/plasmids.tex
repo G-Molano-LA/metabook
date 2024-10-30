@@ -1,0 +1,75 @@
+% !TEX root = ../notes_template.tex
+\chapter{Plasmids}\label{chp:Plasmids}
+
+\minitoc
+ 
+
+\section{Introduction}
+Plasmid are DNA molecules located outside of the chromosomal DNA, i.e. extrachromosomal. Their topology is frequently 
+circular although linear plasmid also exists. They have been extensively studied in Bacteria, even though Archaea and 
+Eukaryota also carry them. 
+
+Plasmids are generally associated with a host range, which can be broad or narrow. Incompatibility groups used from plasmid 
+classification. Seems that their host range is determined by their ability to escape host defenses and the use of host's machinery. 
+
+Mainly, plasmids mobility has been associated to its conjugation system, although other mechanisms have been described, 
+such as membrane vesicles (castañeda 2024). Importantly, not all plasmids have transfer and mobility functions. 
+
+Due to their mobility, plasmids are included in the category of mobile genetic elements, along with 
+Integrative Conjugative Elements (ICEs, which integrate into the host genome and carry a functional conjugation system for 
+inter-cellular transfer, \(\backsim\)18-500 kb in length) and phages (forming viral particles that infect a prokaryotic cell, 
+replicating within it and are transferred between the cells via transduction, \(\backsim\)11-500 kb in length) (Khedkar 2022). 
+
+Insertion sequences (IS, elements carry only a transposase gene, \(\backsim\)2.5 kb in length) and, transposons (elements 
+that carry transposase and dispensable cargo genes, \(\backsim\)5 kb in length) and integrons (gene acquisition systems 
+that are immobile without other MGEs, several kb in length) depend on other MGEs for inter-cellular transfer.
+
+\section{Structure}
+\begin{itemize}
+    \item \textbf{Backbone}. Consists in two differentiated parts.
+    \begin{itemize}
+        \item Essential genes that ensure vertical inheritance (replication, copy number, partitioning, stability).
+        \item Inessential genes that code for horizontal gene transfers.
+    \end{itemize}
+    \item \textbf{Genetic cargo}. Regions outside backbone that may contribute a phenotypic advantage to their hosts. 
+\end{itemize}
+Plasmid stability depends on the balance between genetic burden and beneficial effect to the host (genetic cargo).
+
+\section{Replication}
+The fundamental characteristic that defines a plasmid is its ability to replicate autonomously. This independence allows 
+the plasmid to present a copy number higher than the chromosome. 
+\begin{align*}
+    Plasmid\ copy\ number = \frac{\#\ plasmid}{\#\ chromosomal\ copies} 
+\end{align*}
+
+However, they also seem to replicate in step with the chromosome, doubling in number during the cell growth of their host, 
+being vertically inherited from generation to generation. Plasmids use at least three distinct types of replication systems: 
+rolling circle, theta, and linear replication. \textbf{Rolling circle} is generally confined to small and high copy number 
+plasmids, whereas large and low copy number plasmids invariably use types of \textbf{theta} or \text{linear} replication systems. 
+
+Plasmids are replicons that transfer between cells via conjugation (6), up to 2.5 Mb in length. This independence from the 
+chromosome defines them as genetic locus where genes may evolve faster than in the chromosome.
+
+\section{Toxin-Antitoxin systems}
+Many bacteria encode lethal proteins in their genome alongside antidotes that counteract their toxicity. These toxin-antitoxin (TA) 
+systems are classified into different types according to the nature of the antitoxins and the mechanism of action of the toxins.
+
+\subsection{Hok/sok system}
+The hok/Sok system has been the most studied T1TA (RNA/RNA interacting systems). It was first discovered on 
+\textit{Escherichia coli} R1 plasmid where it acts by maintaining plasmid copies in a cell population through post-segregational 
+killing of the plasmid-free cells. 
+
+\begin{itemize}
+    \item The Hok (host-killing) type I toxin is a small hydrophobic protein [52 amino acids (aa)] targeting the inner membrane and 
+        leading to cell death.
+    \item The Sok (suppression of killing) antitoxin is an RNA that inhibits the production of Hok at the post-transcriptional level.
+    \item The mok (modulation of killing), that overlaps with the hok coding sequence (CDS) and is required for hok translation. 
+    The translation of mok, rather than the Mok product, was shown to be important for proper hok regulation and expression. 
+    For simplicity, the mok\_hok bicistronic mRNA will be referred to as the hok mRNA throughout the article \citetitle{Rhun2022} \cite{Rhun2022}.
+\end{itemize}
+
+[TO DO]
+\begin{itemize}
+    \item \citetitle{Khedkar2022} \cite{Khedkar2022}
+    \item \citetitle{Harms2018} \cite{Harms2018}
+\end{itemize}
