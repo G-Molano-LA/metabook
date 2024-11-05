@@ -27,33 +27,34 @@
 \usepackage{hyperref}
 % link colors settings
 \hypersetup{
-    colorlinks=true,
-    citecolor=magenta,
-    linkcolor=blue,
-    filecolor=green,      
-    urlcolor=cyan,
-    % hypertexnames=false,
-}
-\usepackage{marginnote}
-\usepackage[capitalise]{cleveref}
-\usepackage{subcaption}
-\usepackage{enumitem}
-\usepackage{mathtools}
-\usepackage{physics}
-\usepackage[linesnumbered,ruled,vlined,algosection]{algorithm2e}
-\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}} % https://tex.stackexchange.com/questions/162207/algorithm2e-comment-style
-\SetCommentSty{mycommfont}
-% \SetCommentSty{textsf}
-\usepackage{epigraph}
-\epigraphwidth=1.0\linewidth
-\epigraphrule=0pt
+  colorlinks=true,
+  citecolor=magenta,
+  linkcolor=blue,
+  filecolor=green,      
+  urlcolor=cyan,
+  % hypertexnames=false,
+  }
+  \usepackage{marginnote}
+  \usepackage[capitalise]{cleveref}
+  \usepackage{subcaption}
+  \usepackage{enumitem}
+  \usepackage{mathtools}
+  \usepackage{physics}
+  \usepackage[linesnumbered,ruled,vlined,algosection]{algorithm2e}
+  \newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}} % https://tex.stackexchange.com/questions/162207/algorithm2e-comment-style
+  \SetCommentSty{mycommfont}
+  % \SetCommentSty{textsf}
+  \usepackage{epigraph}
+  \epigraphwidth=1.0\linewidth
+  \epigraphrule=0pt
+  
+  % adjust margin
+  \usepackage[margin=2.3cm]{geometry}
+  \headheight13.6pt
+  
+  \usepackage[most]{tcolorbox} % colored boxes
+  \tcbuselibrary{breakable} % Load the breakable library for tcolorbox
 
-% adjust margin
-\usepackage[margin=2.3cm]{geometry}
-\headheight13.6pt
-
-% colored boxes
-\usepackage[most]{tcolorbox}
 
 %%%%%%%%%%%%%%%% thmtools %%%%%%%%%%%%%%%%%%%%%
 \usepackage{thmtools}
@@ -221,7 +222,6 @@ delim_0 "\\nobreak\\dotfill"
 
 %%%%%%%%%%%%%%%Content%%%%%%%%%%%%%%%
 % \mainmatter % separat the number of toc and mainmatter
-\input{./chapter/preface.tex}
 
 \part{Genomes}
 \input{./chapter/human_genome.tex}
@@ -238,10 +238,8 @@ cellular machinery to propagate. They can move around within a genome or be tran
 
 \part{Metagenomics}
 \input{./chapter/metagenomics.tex}
+\input{./chapter/oral_microbiome.tex}
 
-\begin{appendices}
-\input{./chapter/appendix_formula.tex}
-\end{appendices}
 
 \backmatter
 
