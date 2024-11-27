@@ -1,6 +1,4 @@
 % !TEX root = ./notes_template.tex
-% \usepackage[style=super]{glossaries}
-% https://www.overleaf.com/learn/latex/Glossaries
 \usepackage[style=super,toc,acronym]{glossaries}
 \setlength{\glsdescwidth}{1\linewidth}
 
@@ -8,13 +6,9 @@
 
 \renewcommand\glossaryname{List of Abbreviations and Symbols}
 
-\newglossaryentry{latex}
-{
-        name=latex,
-        description={Is a mark up language specially suited for 
-scientific documents}
-}
-
+%%
+% GLOSSARY
+%%
 \newglossaryentry{bulge}{
         name=bulge,
         description={Two short alternative directed paths between the same vertices of the de Bruijn graph. They are 
@@ -24,7 +18,41 @@ scientific documents}
         name=complex bulge,
         description={Multiple bulges often aggregate into more complex subgraphs}
 }
+\newglossaryentry{ecosystems}{
+        name=ecosystem,
+        description={Community or group of organisms that live and interact with each other in a specific environment}
+}
+
+\newglossaryentry{microbiome}{
+        name=microbiome,
+        description={The words "micro" and "biome" are of Ancient Greek origin. "Micro" ($\mu\iota\kappa\rho o\zeta$) means small, while 
+        the term "biome" is composed of the Greek word bíos ($\beta\iota o \zeta$, life) and modified by the ending "ome" (Anglicization of Greek)}
+}
+
+\newglossaryentry{microbiota}{
+        name=microbiota,
+        description={The words "micro" and “biota” are also of Ancient Greek origin. It is a combination of "Micro" ($\mu\iota\kappa\rho o \zeta$, small), with 
+        the term "biota" ($\beta\iota o \tau\alpha$), which means the living organisms of an ecosystem or a particular area}
+}
+\newglossaryentry{habitat}{
+        name=habitat,
+        description={Refers to externalities such as the physical space and chemical environment that allow and organism to exist, 
+        including contributions from other members of the microbial community}
+}
+\newglossaryentry{niche}{
+        name=niche,
+        description={Refers to the activity of an organism and the functional role that each member plays in the community. Interactions of 
+        the member both with one another and with the habitat drive the emergent organization of the community as a whole}
+}
+\newglossaryentry{low-grade systemic inflammation}{
+        name=low-grade systemic inflammation,
+        description={C-reactive protein levels 3-10 mg/L}
+}
+%%
+% ACRONYM
+%%
 
 \newacronym{crp}{CRP}{C-reactive protein}
 \newacronym{t2dm}{T2DM}{Type-2 Diabetes Mellitus}
 \newacronym{cvd}{CVD}{cardiovascular disease}
+
