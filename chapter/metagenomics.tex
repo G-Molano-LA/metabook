@@ -167,6 +167,35 @@ We will measure the two following indexes:
     \item[FaithPD] phylogenetic relatedness between taxa.
 \end{itemize}
 
+\subsection{Beta diversity}
+While alpha diversity measures the diversity within a single sample, beta diversity measures how different two or more 
+samples are from each other. It gives an idea of how much the species composition varies between different environments 
+or individuals. Beta diversity is crucial for identifying how the microbiome changes in response to factors like diet, 
+disease, medication, or other environmental influences. For instance, researchers might compare the gut microbiome of 
+healthy individuals with those who have a particular disease to identify differences.
+
+We can measure beta-diversity using dissimilarity indexes, such as:
+\begin{itemize}
+    \item Jaccard. Dissimilarity by presence/absence taxa. Range 0-1.
+    \item Bray-Curtis. Dissimilarity weighted by taxa abundances. Range 0-1.
+    \item Unifrac. Similarly based on phylogenetic relationships. Weighted/Unweighted.
+    \item Aitchison. Euclidean distance between CLR-transformed data. Account for compositionality.
+\end{itemize}
+
+To analyse and visualize the differences in species composition across multiple samples we often use the 
+Principal Coordinates Analysis (PCoA). PCoA is a technique used to visualize complex, multi-dimensional data 
+(like Bray-Curtis dissimilarities) in a way that makes it easier to interpret. PCoA starts with a distance 
+(or dissimilarity) matrix, which is a square matrix where each entry represents the dissimilarity between a pair of 
+samples (like the Bray-Curtis dissimilarity). PCoA then finds a set of axes (called principal coordinates) that can 
+best represent these distances in a lower-dimensional space, usually 2D or 3D. This is similar to how Principal 
+Component Analysis (PCA) reduces data dimensionality but is specifically tailored to dissimilarity data.The first 
+principal coordinate (PC1) explains the most variation in the data, the second principal coordinate (PC2) explains the 
+next most, and so on.
+
+Each point on the plot represents a sample, and the position of the point reflects its relationship with other samples 
+based on their Bray-Curtis dissimilarity.
+Close Points: Samples that are close together on the plot have similar species compositions.
+Distant Points: Samples that are far apart have more different species compositions.
 
 \section{Metagenomes reconstruction}
 \subsection{Assembly}
@@ -319,9 +348,6 @@ Local assembly errors (from more common to less):
 [TO DO]
 Differents genes within a population. Pangenome analysis.
 
-\section{Microbila diversity}
-[TO DO]
-Beta diversity and its representation. Concept of dimensionality reduction techniques.
 
 \section{Abundance estimation}
 [TO DO]
